@@ -2,14 +2,14 @@ const experss = require("express");
 const app = experss();
 const http = require("http");
 const cors = require("cors");
-const { Server } = require = require("socket.io")
+const { Server } = (require = require("socket.io"));
 app.use(cors);
 
 const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: "https://websockettesting.vercel.app/",
     methods: ["GET", "POST"],
   },
 });

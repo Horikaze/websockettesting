@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
 import io from "socket.io-client";
 import { winningCombinations } from "./utils/game";
-const socket = io("http://localhost:3001");
+const socket = io(import.meta.env.VITE_API_KEY);
 function App() {
   const [room, setRoom] = useState("");
   const [myChoices, setMyChoices] = useState<number[]>([]);
